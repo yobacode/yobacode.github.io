@@ -3,7 +3,7 @@
 BUILD_TIME := $(shell date +"%Y%m%d")
 GIT_COMMIT_PARENT := $(shell git rev-parse --short HEAD 2>/dev/null || echo "nogit")
 GIT_BRANCH := $(shell git branch --show-current 2>/dev/null || echo "unknown")
-BUILD_INFO_FILE := docs/build-$(BUILD_TIME)-$(GIT_COMMIT_PARENT).txt
+BUILD_INFO_FILE := docs/build.txt
 
 all: clean build buildinfo firefox
 
